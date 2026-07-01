@@ -5,12 +5,12 @@
 class Clip < Formula
   desc "Upload your clipboard for sharing"
   homepage ""
-  version "0.5.1"
+  version "0.5.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bemoty/clip/releases/download/v0.5.1/clip_0.5.1_darwin_amd64.tar.gz"
-      sha256 "d239a7cae60b9125b4fc51d6ac2494b5e86c34e012936e905d0d2496a0b68879"
+      url "https://github.com/bemoty/clip/releases/download/v0.5.2/clip_0.5.2_darwin_amd64.tar.gz"
+      sha256 "9951eb34de31250aa249fa2e88faef69752d082cd306284db34dc4e453b5ffae"
 
       define_method(:install) do
         bin.install "clip"
@@ -18,8 +18,8 @@ class Clip < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bemoty/clip/releases/download/v0.5.1/clip_0.5.1_darwin_arm64.tar.gz"
-      sha256 "d4950a70abc8bb2daceb1829be73f7ad7219192e3ed4ea5c0cbe3ff1d28953fe"
+      url "https://github.com/bemoty/clip/releases/download/v0.5.2/clip_0.5.2_darwin_arm64.tar.gz"
+      sha256 "5fc1fbff1f28b09415be3a8643d3a21da707cd253ec05fd46606026066a6932b"
 
       define_method(:install) do
         bin.install "clip"
@@ -30,16 +30,16 @@ class Clip < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bemoty/clip/releases/download/v0.5.1/clip_0.5.1_linux_amd64.tar.gz"
-      sha256 "f237a85ab046bb2517673bf5ec145469b3f7118f6b8e660e3c7f9805acfd7f2f"
+      url "https://github.com/bemoty/clip/releases/download/v0.5.2/clip_0.5.2_linux_amd64.tar.gz"
+      sha256 "32f1f658e1e3ad247bc79b22cba7122c343f671e1e44bc59c112baa3f63eedbe"
       define_method(:install) do
         bin.install "clip"
         man1.install Dir["man/clip*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bemoty/clip/releases/download/v0.5.1/clip_0.5.1_linux_arm64.tar.gz"
-      sha256 "25f79cec11ec985ec1bddad7d5967cbf60d45501201998ffd01255bdec64ba92"
+      url "https://github.com/bemoty/clip/releases/download/v0.5.2/clip_0.5.2_linux_arm64.tar.gz"
+      sha256 "148e416acfa75459804a41c0342a6b69f6c947f1c5cd72ec09ee506c636d94c7"
       define_method(:install) do
         bin.install "clip"
         man1.install Dir["man/clip*.1"]
