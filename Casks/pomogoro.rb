@@ -1,14 +1,14 @@
 cask "pomogoro" do
-  version "0.0.4"
+  version "0.1.0"
 
   on_arm do
-    url "https://github.com/bemoty/pomogoro/releases/download/v0.0.4/pomogoro-arm64.dmg"
-    sha256 "e703144e3b174e25e2582af4fcd2334d99c5eef3ab20ae93d2385ad872e35e65"
+    url "https://github.com/bemoty/pomogoro/releases/download/v0.1.0/pomogoro-arm64.dmg"
+    sha256 "09083e10632660de3fa053ecae33ecbd72263752d9a59cf9000705134b1c9a20"
   end
 
   on_intel do
-    url "https://github.com/bemoty/pomogoro/releases/download/v0.0.4/pomogoro-amd64.dmg"
-    sha256 "6b22bbfd33960ce5b994900150eb0db4dce47f522c9d4aee0558f5165b8c2f17"
+    url "https://github.com/bemoty/pomogoro/releases/download/v0.1.0/pomogoro-amd64.dmg"
+    sha256 "c08caf41048f0b2933aa4865bba558cabdfc776cf6697fc4d835eb948c499eaa"
   end
 
   name "pomogoro"
