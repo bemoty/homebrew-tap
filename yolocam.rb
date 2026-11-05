@@ -11,7 +11,7 @@ class Yolocam < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_darwin_amd64.tar.gz"
-      sha256 "a6b26ddc74138f9702a19f0dc1e88e298f26d0763b7791599c56975bfe740d35"
+      sha256 "66e482c69fd0274fb2c960e95552758f0b0d7b776713e7f19b0017a86d414cf5"
 
       define_method(:install) do
         bin.install "yolocam"
@@ -19,7 +19,7 @@ class Yolocam < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_darwin_arm64.tar.gz"
-      sha256 "e33dcb07ab34e080551564d80c7e30b75d7252a7d3e2947756ee9e753360e1f4"
+      sha256 "1acb815aed154990bf343049b2f61a87c3e2e7e2c247b4f6c1abb28093bf1a25"
 
       define_method(:install) do
         bin.install "yolocam"
@@ -30,14 +30,14 @@ class Yolocam < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_linux_amd64.tar.gz"
-      sha256 "f63826c761b9bd9992aa388e998015e84b2a1c1dbef5db668287eb38daa6ec5a"
+      sha256 "6fc6a11092c7ddc6a0feb1fdf35d06c063c3e2b115765bd5851358c4a212ba7f"
       define_method(:install) do
         bin.install "yolocam"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_linux_arm64.tar.gz"
-      sha256 "9ec0dda9af4760d8e0ac368d72e236f34cbfa97e11b8633fd4c3b9ad533bcd1e"
+      sha256 "dc12814585f5d40aefde30eae941b312b9c37a02ee4886a4c0eb0abafc28d6ab"
       define_method(:install) do
         bin.install "yolocam"
       end
