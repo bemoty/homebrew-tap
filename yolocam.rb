@@ -5,41 +5,53 @@
 class Yolocam < Formula
   desc "Control YoloLiv YoloCam S3 camera settings from the command line"
   homepage "https://github.com/bemoty/yolocam"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_darwin_amd64.tar.gz"
-      sha256 "66e482c69fd0274fb2c960e95552758f0b0d7b776713e7f19b0017a86d414cf5"
+      url "https://github.com/bemoty/yolocam/releases/download/v1.1.0/yolocam_1.1.0_darwin_amd64.tar.gz"
+      sha256 "4eb2acbe1619c3ebd441bcdc84035ef9238d9c6f1a8d21cc69119cea680d1889"
 
       define_method(:install) do
         bin.install "yolocam"
+        bash_completion.install "completions/yolocam.bash" => "yolocam"
+        zsh_completion.install "completions/yolocam.zsh" => "_yolocam"
+        fish_completion.install "completions/yolocam.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_darwin_arm64.tar.gz"
-      sha256 "1acb815aed154990bf343049b2f61a87c3e2e7e2c247b4f6c1abb28093bf1a25"
+      url "https://github.com/bemoty/yolocam/releases/download/v1.1.0/yolocam_1.1.0_darwin_arm64.tar.gz"
+      sha256 "ca747df1e406ec5ed3d08e312982838b4cbb0c562883d6837e15c575a97e4919"
 
       define_method(:install) do
         bin.install "yolocam"
+        bash_completion.install "completions/yolocam.bash" => "yolocam"
+        zsh_completion.install "completions/yolocam.zsh" => "_yolocam"
+        fish_completion.install "completions/yolocam.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_linux_amd64.tar.gz"
-      sha256 "6fc6a11092c7ddc6a0feb1fdf35d06c063c3e2b115765bd5851358c4a212ba7f"
+      url "https://github.com/bemoty/yolocam/releases/download/v1.1.0/yolocam_1.1.0_linux_amd64.tar.gz"
+      sha256 "9770c628e2cde87a39e80fc098a4310352bc9adcbcc929bcb50f0e6ebf031522"
       define_method(:install) do
         bin.install "yolocam"
+        bash_completion.install "completions/yolocam.bash" => "yolocam"
+        zsh_completion.install "completions/yolocam.zsh" => "_yolocam"
+        fish_completion.install "completions/yolocam.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bemoty/yolocam/releases/download/v1.0.0/yolocam_1.0.0_linux_arm64.tar.gz"
-      sha256 "dc12814585f5d40aefde30eae941b312b9c37a02ee4886a4c0eb0abafc28d6ab"
+      url "https://github.com/bemoty/yolocam/releases/download/v1.1.0/yolocam_1.1.0_linux_arm64.tar.gz"
+      sha256 "198afd687ae39bf842bfa4fa4a668c017aff4e0726e7192e2fcdc31daee010bc"
       define_method(:install) do
         bin.install "yolocam"
+        bash_completion.install "completions/yolocam.bash" => "yolocam"
+        zsh_completion.install "completions/yolocam.zsh" => "_yolocam"
+        fish_completion.install "completions/yolocam.fish"
       end
     end
   end
